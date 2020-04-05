@@ -1,0 +1,15 @@
+1. Is a query to find all the persons known for movies which were released in the 1960s:
+select N.primary_name, N.birth_year
+from test_task.name_basics N
+join test_task.films F on N.known_for_title=F.id
+Where F.start_year>1959 and F.start_year<1970
+
+
+2. Is a query to find the most popular year of birth for found on the first query persons:
+select N.primary_name, N.birth_year, count(N.birth_year) as test, F.start_year
+from test_task.name_basics N
+join test_task.films F on N.known_for_title=F.id
+Where F.start_year>1959 and F.start_year<1970 and N.birth_year is not null
+GROUP BY (N.birth_year)
+ORDER BY test desc
+Limit 1

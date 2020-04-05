@@ -1,0 +1,7 @@
+How to run test from console on Windows:
+1. Ensure that JAVA_HOME variable set to your jdk-1.8 version
+2. Download and Install Maven http://maven.apache.org/install.html
+3. Open command line from project folder
+4. Enter from command line "mvn test"
+
+SQL task (queries) provided in sql_tast.txt document in current repository
